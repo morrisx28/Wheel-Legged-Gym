@@ -40,6 +40,8 @@ from .wheel_legged_vmc_flat.wheel_legged_vmc_flat_config import (
     WheelLeggedVMCFlatCfg,
     WheelLeggedVMCFlatCfgPPO,
 )
+from .biped_wheel.biped_wheel_config import BipedWheelCfg, BipedWheelCfgPPO
+from .biped_wheel.biped_wheel_robot import LeggedRobot
 
 
 import os
@@ -57,4 +59,7 @@ task_registry.register(
     LeggedRobotVMC,
     WheelLeggedVMCFlatCfg(),
     WheelLeggedVMCFlatCfgPPO(),
+)
+task_registry.register(
+    "biped_wheel", LeggedRobot, BipedWheelCfg(), BipedWheelCfgPPO()
 )
