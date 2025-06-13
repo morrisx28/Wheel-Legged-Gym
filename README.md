@@ -29,7 +29,7 @@ Related Links:
 
 ### Usage ###
 1. Train:  
-    ```python wheel_legged_gym/scripts/train.py --task=wheel_legged_vmc_flat```
+    ```python wheel_legged_gym/scripts/train.py --task=biped_wheel```
     -  To run on CPU add following arguments: `--sim_device=cpu`, `--rl_device=cpu` (sim on CPU and rl on GPU is possible).
     -  To run headless (no rendering) add `--headless`.
     - **Important**: To improve performance, once the training starts press `v` to stop the rendering. You can then enable it later to check the progress.
@@ -47,7 +47,7 @@ Related Links:
      - --max_iterations MAX_ITERATIONS:  Maximum number of training iterations.
      - --exptid EXPTID:  Experiment ID.
 2. Play a trained policy:
-   ```python wheel_legged_gym/scripts/play.py --task=wheel_legged_vmc_flat```
+   ```python wheel_legged_gym/scripts/play.py --task=biped_wheel```
     - By default, the loaded policy is the last model of the last run of the experiment folder.
     - Other runs/model iteration can be selected by setting `load_run` and `checkpoint` in the train config.
 3. Existing tasks:
